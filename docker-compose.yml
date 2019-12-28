@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    application:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - .:/app
+            - vendor:/vendor
+            - build:/app/_build
+            - deps:/app/deps
+            - node_modules:/app/apps/elython_web/assets/node_modules
+            - static:/app/apps/elython_web/priv/static
+        ports:
+            - "4000:4000"
+        tty: true
+        environment: 
+            PYTHONUSERBASE: /vendor
+            PATH: $PATH:/vendor/bin
+
+# volumes defined for use in above configuration
+volumes:
+    build:
+    deps:
+    node_modules:
+    static:
+    vendor:

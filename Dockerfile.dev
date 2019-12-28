@@ -1,0 +1,19 @@
+FROM civilcode/elixir-dev:1.9.1a
+
+RUN mix local.hex --force
+RUN mix local.rebar --force
+
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add python3-dev py3-pip
+
+# Resolve error
+# WARNING: The directory '/opt/app/.cache/pip' or its parent directory is not owned by the 
+# current user and caching wheels has been disabled. check the permissions and owner of that directory. 
+# If executing pip with sudo, you may want sudo's -H flag.
+RUN chown -R root /opt/app/
+RUN pip3 install --upgrade pip
+
+WORKDIR /app
+
+CMD ["/bin/bash"]
