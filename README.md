@@ -1,5 +1,12 @@
 # Elixir and Python Integration: "Elython"
 
+Integration using [Pyrlang](https://pyrlang.github.io/Pyrlang/): Erlang node implemented in Python 3.5+ (Asyncio-based).
+
+## References
+
+- [Deploying Machine Learning Models for Elixir applications #1: Getting Started](https://medium.com/@pawel_dawczak/elixir-python-1-getting-started-165317f873fa)
+- [Deploying Machine Learning Models for Elixir applications #2: Getting Excited](https://medium.com/@pawel_dawczak/elixir-python-2-getting-excited-672ec35fa681)
+
 ## Prerequistes
 
 Docker only.
