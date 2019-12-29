@@ -22,7 +22,7 @@ Start up two separate shells:
     # Shell 1: start up an Elixir shell and register the shell process
     $ make demo.start
     iex> Process.register(self(), :iex)
-    
+
     # Shell 2: send a message `:hello` from Python to the Elixir shell (demo.py)
     $ make demo.send_message
 
@@ -32,3 +32,7 @@ Start up two separate shells:
 ## Tips
 
 Ctrl-C to exit the Elixir shell and Python process.
+
+## Investigate
+
+- [Elixir, Mix, Erlport, poolboy, and Anaconda Python](http://davekuhlman.org/elixir-poolboy-erlport-datasci.html)
